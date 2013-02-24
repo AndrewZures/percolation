@@ -3,25 +3,27 @@ public class PercolationStats {
 	private double[] results;
 	private int t;
 
-   public PercolationStats(int N, int T) {
-	   if (N <= 0 || T <= 0) { throw new IllegalArgumentException(); }
+   public PercolationStats(int N, int T){
+	   if( N <= 0 || T <= 0){throw new IllegalArgumentException();}
 	   t = T;
 	   results = new double[T];
 	   
-	   for (int i = 0; i < T; i++) {
+	   for(int i = 0; i < T; i++){
 		   Percolation p = new Percolation(N);
 		   testPercolation(p, N, i);
 	   }
+	   
+	   
    }
 	   
-   private void testPercolation(Percolation p, int N, int i) {
+   private void testPercolation (Percolation p, int N, int i){
 
 	   int count = 0;
-	   while (!p.percolates()) {
-		 int randomI = StdRandom.uniform(N)+1;	  
-		 int randomJ = StdRandom.uniform(N)+1;
+	   while(!p.percolates()){
+		 int randomI = StdRandom.uniform(N)+1 ;	  
+		 int randomJ = StdRandom.uniform(N)+1 ;
 		  //System.out.printf("Random: %d %d \n", randomI, randomJ);
-		 if (!p.isOpen(randomI, randomJ)) {
+		 if(!p.isOpen(randomI, randomJ)){
 			 p.open(randomI, randomJ);
 			 count++;
 		 }
@@ -30,22 +32,20 @@ public class PercolationStats {
    }
 	   
  // perform T independent computational experiments on an N-by-N grid
-   public double mean() {
+   public double mean()   {
 	   return StdStats.mean(results);
-   }
-   public double stddev() {
+   }// sample mean of percolation threshold
+   public double stddev()  {
 	   return StdStats.stddev(results);
-   }
+   }// sample standard deviation of percolation threshold
    public double confidenceLo() {
-	   return StdStats.mean(results) 
-			   - (1.96 * StdStats.stddev(results)) / Math.sqrt(t);
-   }
+	   return StdStats.mean(results) - (1.96 * StdStats.stddev(results)) / Math.sqrt(t);
+   }// returns lower bound of the 95% confidence interval
    public double confidenceHi() {
-	   return StdStats.mean(results) 
-			   + (1.96 * StdStats.stddev(results)) / Math.sqrt(t);
-   }
+	   return StdStats.mean(results) + (1.96 * StdStats.stddev(results)) / Math.sqrt(t);
+   }// returns upper bound of the 95% confidence interval
    public static void main(String[] args) {
-	   
+	   // test client, described below
 	   int nArg = Integer.parseInt(args[0]);
 	   int tArg = Integer.parseInt(args[1]);
 	   
@@ -53,6 +53,8 @@ public class PercolationStats {
 	   StdOut.print(stats.mean());
 	   StdOut.print(stats.stddev());
 	   StdOut.printf("%f, %f", stats.confidenceLo(), stats.confidenceHi());
+	   
+	   
    }
 	
 	

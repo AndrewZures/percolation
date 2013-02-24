@@ -17,8 +17,8 @@ public class runPercolation {
   		if(p.percolates()){
   			System.out.print("Percolateddd");
   		}
-	  p.printPerc();
-	  p.printGrid();
+	  //p.printPerc();
+	 // p.printGrid();
     //p.printGrid();
     //System.out.println(p.getUnionArrayCount());
   }
