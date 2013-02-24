@@ -27,12 +27,12 @@ public class Percolation {
 		  			
 		  if(i < gridWidth){checkDownSite(i,j);}
 		  //needed for non backwash implementation
-		  //else {unionArray.union(getOneDArrayIndex(i,j), sinkNum);}
+		  else {unionArray.union(getOneDArrayIndex(i,j), sinkNum);}
 		  
 		  if(j > 1){checkLeftSite(i,j);}
 		  
 		  if(j < gridWidth){checkRightSite(i,j);}
-		  checkBottomSites();
+		  //checkBottomSites();
   }
 		  
  
@@ -67,8 +67,10 @@ private void checkRightSite(int i ,int j){
   public void open(int i, int j) {
 	  if(i < 1 || i > gridWidth) throw new IndexOutOfBoundsException("here");
 	  if(j < 1 || j > gridWidth) throw new IndexOutOfBoundsException("here j");
-	  grid[i-1][j-1] = 1;
-	  checkForConnections(i, j);
+	  if(!isOpen(i,j)){
+		  grid[i-1][j-1] = 1;
+		  checkForConnections(i, j);
+	  }
 
   }
   
