@@ -3,6 +3,8 @@
  * Winter 2013 - Applied Algorithms - Coursera - Princeton University
  * 
  * This class models a percolation system
+ * 
+ * Percolation Problem:
  *  Given a composite systems comprised of randomly distributed insulating 
  *  and metallic materials: what fraction of the materials 
  *  need to be metallic so that the composite system is an electrical conductor? 

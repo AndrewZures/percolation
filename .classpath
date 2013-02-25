@@ -4,5 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="/Users/andrewzures/Desktop/AppAlgs/Assignments/algs4/algs4.jar"/>
 	<classpathentry kind="lib" path="/Users/andrewzures/Desktop/AppAlgs/Assignments/algs4/stdlib.jar"/>
+	<classpathentry kind="lib" path="/Users/andrewzures/Desktop/AppAlgs/Assignments/algs4/percolation"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
