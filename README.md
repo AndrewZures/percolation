@@ -25,8 +25,8 @@ analysis of a system's percolation.
 
 IMPLEMENTATION:
 
-percolation.java - creates the percolation environment
-percolationStats.java - tests the percolation environment using Monte Carlo Approach
+percolation.java - creates the percolation environment.
+percolationStats.java - tests the percolation environment using Monte Carlo Approach.
 
 
 GRADING CRITERIA:
