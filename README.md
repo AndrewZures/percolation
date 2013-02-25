@@ -20,7 +20,7 @@ Scientists have defined an abstract process known as percolation to model such s
 ALGORITHM/DATASTRUCTURE APPLIED:
 
 percolation environment implements a weighted quick union algorithm to achieve constant time
-analysis of a system's percolation given the opening of an additional site.
+analysis of a system's percolation.
 
 
 IMPLEMENTATION:
