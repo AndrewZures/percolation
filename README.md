@@ -1,5 +1,7 @@
-percolation
+Percolation
 ===========
+
+Andrew Zures - Coursera - Applied Algorithms I - Princeton University
 
 Applied Algorithms HW1 - Percolation : Weighted Quick Union Algorithm
 
